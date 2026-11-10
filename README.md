@@ -65,14 +65,14 @@ go-tasks-api/
 └── README.md
 ```
 
-- `internal/model` — модель `Task`
-- `internal/storage` — интерфейс `Store` + реализация на SQLite
-- `internal/handler` — HTTP-хендлеры
-- `main.go` — сборка зависимостей, роутинг, graceful shutdown
+- `internal/model` - модель `Task`
+- `internal/storage` - интерфейс `Store` + реализация на SQLite
+- `internal/handler` - HTTP-хендлеры
+- `main.go` - сборка зависимостей, роутинг, graceful shutdown
 
 Слой хранения скрыт за интерфейсом `Store`. В тестах используется
-in-memory-реализация на `map`, в проде — SQLite. Хендлеры не знают,
-откуда берутся данные, — это позволяет тестировать их без БД.
+in-memory-реализация на `map`, в проде - SQLite. Хендлеры не знают,
+откуда берутся данные, - это позволяет тестировать их без БД.
 
 ## Запуск
 
